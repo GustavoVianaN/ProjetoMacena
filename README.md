@@ -1,29 +1,29 @@
-# Macena Advogados · Central de atendimento
+# Macena Advogados · JusPonte
 
-Protótipo (MVP) em React e Vite da assistente virtual e do painel interno do escritório.
+Protótipo (MVP) das três frentes de atendimento pedidas pelo Dr. Paulo, todas ligadas a um único painel:
+
+1. **JusPonte**: plataforma nacional de captação, sem a marca do escritório, para quem procura advogado no Google. A assistente entende o caso e encaminha ao especialista: cível, família e previdenciário → Dr. Paulo; trabalhista → Dr. Luiz; penal → Dr. Nick; outras áreas → rede de parceiros.
+2. **Site Macena**: site do escritório com bate-papo. O cliente sabe que vai falar com o Dr. Paulo, o Dr. Luiz ou o Dr. Nick.
+3. **WhatsApp**: secretária virtual que adianta o atendimento até o Dr. Paulo responder.
 
 ```sh
 npm install
 npm run dev
 ```
 
-Acesso de demonstração: usuário **paulo**, senha **123456**.
+Para abrir no celular, use `npm run dev -- --host` e acesse pelo IP do computador.
 
 ## Roteiro de apresentação
 
-1. **Login**: entre com as credenciais acima.
-2. **Visão geral**: casos que precisam de atenção, atendimentos fora do expediente, distribuição por área e como o fluxo funciona.
-3. **Simular atendimento**: converse como cliente no "WhatsApp". Toque em um exemplo ou escreva livremente. A ficha ao lado se preenche sozinha. Experimente:
-   - "Meu nome é Ana Souza, moro em Campinas e fui demitida. Tenho audiência amanhã" (a assistente não repete o que já foi dito e sinaliza o prazo);
-   - um CPF inválido (ela pede para conferir) ou o botão "Gerar CPF fictício";
-   - "vou ganhar?" (ela não promete resultados);
-   - o clipe para anexar arquivos e o microfone para ditar (Chrome e Safari).
-4. **Enviar para o painel da equipe**: o caso aparece com notificação, resumo, CPF mascarado e prazo destacado.
-5. **Assumir atendimento**: a assistente é pausada e o advogado responde. Use também "Copiar resumo" e "Solicitar pelo WhatsApp" na aba Documentos.
-6. **Clientes**, **Documentos** (pendentes e recebidos) e **Roadmap** (o que é demo e o que é produção).
+A barra escura no topo alterna entre as quatro telas.
 
-Em **Ajuda** é possível restaurar os dados de exemplo.
+1. **JusPonte**: toque em "advogado criminal urgente" nas buscas frequentes. O chat identifica Direito Penal, apresenta o Dr. Nick e o cabeçalho passa a mostrar "Dr. Nick · Assistente virtual". Responda as perguntas (há botão de telefone fictício). Pergunte "você é advogado?" ou "vou ganhar?" para ver a resposta transparente. Teste também "O banco me cobrou indevidamente", que vai para a rede de parceiros.
+2. **Site Macena**: "Conversar agora" e "Fui demitido e não recebi a rescisão" → Dr. Luiz.
+3. **WhatsApp**: converse como cliente. Ao lado aparece a ficha que o escritório recebe.
+4. **Painel**: os casos chegam com notificação, canal de origem e advogado responsável. Dá para transferir entre advogados, assumir, responder, pedir documentos e copiar o resumo. A Visão geral mostra casos por canal, por advogado e por estado. O Roadmap traz a ordem sugerida de lançamento e os cuidados com a OAB.
+
+Em **Ajuda**, no painel, é possível restaurar os dados de exemplo.
 
 ## Limites da demonstração
 
-Os dados ficam somente no navegador e o login é fictício. A triagem usa regras locais no lugar da IA. A integração com o WhatsApp, a IA generativa, a transcrição de áudios recebidos, o armazenamento seguro dos arquivos, a autenticação real e a integração processual ficam para a implementação de produção. Use apenas dados fictícios.
+Os nomes dos advogados e da plataforma são provisórios. A triagem usa regras locais no lugar da IA, os dados ficam somente no navegador e não há login. A integração com o WhatsApp, a IA generativa, a transcrição de áudios recebidos, o armazenamento seguro de arquivos, o domínio e SEO dos sites e a rede de parceiros ficam para a produção. Use apenas dados fictícios.
